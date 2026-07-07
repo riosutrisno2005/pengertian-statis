@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengertian Routing Statis</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f4f8fb;
+            color: #1a2c3e;
+            line-height: 1.7;
+            padding: 30px 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+            padding: 45px 50px;
+        }
+        h1 {
+            font-size: 2rem;
+            border-left: 6px solid #0077b6;
+            padding-left: 20px;
+            margin-bottom: 28px;
+            color: #023e5f;
+            font-weight: 600;
+        }
+        p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+            text-indent: 0.5in;
+        }
+        p:first-of-type {
+            text-indent: 0;
+        }
+        i {
+            font-style: italic;
+            color: #0b4a6f;
+        }
+        hr {
+            margin: 30px 0 20px;
+            border: 0;
+            height: 1px;
+            background: linear-gradient(90deg, #cbd5e1, transparent);
+        }
+        .footer {
+            font-size: 0.8rem;
+            text-align: center;
+            color: #2c6b84;
+            margin-top: 20px;
+        }
+        @media (max-width: 700px) {
+            .container { padding: 22px 18px; }
+            h1 { font-size: 1.6rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Pengertian <i>Routing Statis</i></h1>
+
+    <p><i>Routing</i> merupakan salah satu proses fundamental dalam sebuah jaringan komputer yang memungkinkan paket data dapat berpindah dari satu jaringan ke jaringan lainnya yang berbeda. Ketika sebuah perangkat pada jaringan A ingin berkomunikasi dengan perangkat pada jaringan B, maka diperlukan sebuah perangkat perantara yang disebut <i>router</i> untuk menentukan jalur terbaik agar paket data dapat sampai ke tujuan. Proses penentuan jalur inilah yang dikenal dengan istilah <i>routing</i>. Tanpa adanya proses <i>routing</i>, komunikasi antar jaringan yang berbeda <i>segmen</i> atau berbeda <i>subnet</i> tidak akan dapat terjadi, karena setiap perangkat jaringan pada dasarnya hanya mampu berkomunikasi secara langsung dengan perangkat lain yang berada pada jaringan atau <i>segmen</i> yang sama.</p>
+
+    <p><i>Routing statis</i> adalah salah satu metode <i>routing</i> di mana <i>administrator</i> jaringan menentukan sendiri secara manual jalur atau rute yang akan dilalui oleh paket data menuju jaringan tujuan. Berbeda dengan <i>routing dinamis</i> yang secara otomatis mempelajari dan memperbarui informasi rute melalui pertukaran data antar <i>router</i> menggunakan <i>protokol routing</i> tertentu, pada <i>routing statis</i> seluruh <i>entri rute</i> harus dimasukkan satu per satu oleh <i>administrator</i> ke dalam <i>tabel routing</i> <i>router</i>. Setiap <i>entri routing statis</i> umumnya terdiri dari beberapa komponen penting, yaitu alamat jaringan tujuan (<i>destination network</i>), <i>subnet mask</i>, dan alamat <i>next-hop</i> atau <i>interface</i> keluar yang akan digunakan untuk meneruskan paket menuju jaringan tersebut.</p>
+
+    <p>Konsep dasar dari <i>routing statis</i> dapat dianalogikan seperti seseorang yang memberikan petunjuk arah secara tertulis dan pasti kepada orang lain untuk menuju suatu lokasi, tanpa mempertimbangkan kemungkinan adanya jalan alternatif atau perubahan kondisi di lapangan. <i>Router</i> yang dikonfigurasi dengan <i>routing statis</i> akan selalu mengikuti jalur yang telah ditentukan tersebut, meskipun sebenarnya terdapat jalur lain yang mungkin lebih efisien, atau bahkan ketika jalur yang telah ditentukan tersebut sedang mengalami gangguan. <i>Router</i> tidak memiliki kemampuan untuk secara otomatis mencari jalur alternatif kecuali <i>administrator</i> melakukan perubahan <i>konfigurasi</i> secara manual.</p>
+
+    <p>Dalam praktiknya, <i>routing statis</i> banyak digunakan pada jaringan yang berskala kecil hingga menengah dengan <i>topologi</i> yang relatif sederhana dan jarang mengalami perubahan struktur. Beberapa alasan mengapa <i>routing statis</i> masih relevan digunakan hingga saat ini antara lain karena <i>konfigurasi</i>nya yang lebih ringan dari sisi pemrosesan <i>router</i> (tidak membebani <i>CPU</i> dan <i>memori</i> <i>router</i> seperti halnya <i>protokol routing dinamis</i>), tingkat keamanan yang relatif lebih tinggi karena <i>router</i> tidak saling bertukar informasi <i>routing</i> dengan perangkat lain sehingga risiko informasi <i>topologi</i> jaringan diketahui pihak luar menjadi lebih kecil, serta memberikan kontrol penuh kepada <i>administrator</i> atas jalur mana saja yang boleh dilalui oleh paket data.</p>
+
+    <p>Meskipun demikian, <i>routing statis</i> juga memiliki sejumlah keterbatasan yang perlu dipahami. Karena seluruh rute dikonfigurasi secara manual, maka <i>routing statis</i> menjadi kurang efisien apabila diterapkan pada jaringan berskala besar dengan jumlah <i>segmen</i> yang banyak, sebab <i>administrator</i> harus menambahkan <i>entri routing</i> satu per satu untuk setiap jaringan tujuan. Selain itu, <i>routing statis</i> tidak dapat beradaptasi secara otomatis terhadap perubahan <i>topologi</i> jaringan, misalnya ketika terjadi kerusakan pada salah satu jalur atau penambahan <i>segmen</i> jaringan baru, <i>administrator</i> harus melakukan perubahan <i>konfigurasi</i> secara manual pada <i>router</i> yang bersangkutan agar komunikasi antar jaringan tetap dapat berjalan dengan baik.</p>
+
+    <p>Terdapat beberapa jenis <i>konfigurasi routing statis</i> yang umum digunakan, di antaranya adalah <i>standard static route</i> yang mengarahkan paket menuju jaringan tujuan tertentu secara spesifik, serta <i>default route</i> atau sering disebut juga <i>default gateway</i> yang berfungsi sebagai jalur "terakhir" untuk meneruskan seluruh paket data yang alamat tujuannya tidak ditemukan pada <i>tabel routing</i>. <i>Default route</i> ini sangat umum digunakan pada <i>router</i> yang terhubung ke jaringan <i>internet</i>, di mana <i>router</i> cukup diarahkan menuju satu <i>gateway</i> saja tanpa perlu mendaftarkan seluruh kemungkinan alamat tujuan yang ada di <i>internet</i>.</p>
+
+    <p>Dengan memahami konsep dasar <i>routing statis</i>, siswa diharapkan dapat mengetahui bagaimana proses <i>routing</i> bekerja secara mendasar sebelum mempelajari metode <i>routing</i> yang lebih kompleks seperti <i>routing dinamis</i>. Pemahaman terhadap <i>routing statis</i> juga menjadi fondasi penting dalam mempelajari administrasi <i>infrastruktur</i> jaringan secara keseluruhan, karena pada dasarnya seluruh metode <i>routing</i> yang lebih canggih tetap berangkat dari prinsip dasar yang sama, yaitu menentukan jalur terbaik agar paket data dapat sampai ke tujuan dengan efisien dan akurat.</p>
+
+    <hr>
+    <div class="footer">
+        <i>Dokumen ini dikonversi dari format Word ke HTML — semua istilah asing dicetak miring.</i>
+    </div>
+</div>
+</body>
+</html>
